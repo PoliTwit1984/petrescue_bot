@@ -8,7 +8,7 @@ import tweepy
 from PIL import Image, ImageDraw, ImageFont
 from random_address import real_random_address
 
-import config
+import config  # storing keys
 
 client = tweepy.Client(config.bearer_token, config.consumer_key,
                        config.consumer_secret, config.access_token,
