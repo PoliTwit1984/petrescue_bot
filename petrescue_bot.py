@@ -47,9 +47,11 @@ def get_text_size(text, image, font):
 
 add = real_random_address()
 zip_code = add.get("postalCode")
+
+zip_code = 63141
 pf = petpy.Petfinder(key=config.petfinder_key, secret=config.petfinder_secret)
 animals = pf.animals(animal_type='dog', status='adoptable', location=zip_code,
-                     distance=500, breed="Dachshund", results_per_page=100, pages=1)
+                     distance=50, breed="Dachshund", results_per_page=100, pages=1)
 animal_ids = []
 for i in animals['animals']:
     animal_ids.append(i['id'])
